@@ -1,0 +1,37 @@
+Design Pattern - Basic 23 design patterns practise
+
+[CONTAINS]
+1. Factory
+2. Abstract Factory
+3. Singleton
+4. Builder
+5. Prototype
+
+6. Bridge
+7. Adapter
+8. Decorator
+9. Composite
+10. Flyweight
+11. Facade
+12. Proxy
+
+13. Template
+14. Strategy
+15. State
+16. Observer
+17. Memento
+18. Mediator
+19. Command
+20. Visitor
+21. Chain of Responsibility
+22. Iterator
+23. Interpreter
+
+[BUILD]
+1. mkdir build
+2. cd build
+3. cmake ..
+4. make
+for testing, type
+5. make test
+then check result in build/Testing/
