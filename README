@@ -42,6 +42,7 @@ then check result in build/Testing/
 run cmake -DCMAKE_INSTALL_PREFIX={prefix}
 then run
 make install
+by default, install binaries into build/bin
 
 [BUILD CONFIGURATION]
 set the configuration by pass
