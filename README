@@ -32,6 +32,18 @@ Design Pattern - Basic 23 design patterns practise
 2. cd build
 3. cmake ..
 4. make
+
+[TESTING]
 for testing, type
-5. make test
+make test
 then check result in build/Testing/
+
+[INSTALL]
+run cmake -DCMAKE_INSTALL_PREFIX={prefix}
+then run
+make install
+
+[BUILD CONFIGURATION]
+set the configuration by pass
+-DBUILD_CONFIGURATION={DEBUG|RELEASE}
+to cmake
