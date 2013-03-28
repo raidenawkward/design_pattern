@@ -24,7 +24,7 @@ ENDIF()
 
 FOREACH(module ${PATTERN_DIR_LIST})
 	SET(dir ${module})
-	SET(sub_binary_dir ${PROJECT_BINARY_DIR}/${dir})
+	MESSAGE("## Module ${dir} found")
 
 	ADD_SUBDIRECTORY(${dir})
 
