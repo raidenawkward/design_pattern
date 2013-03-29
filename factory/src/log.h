@@ -9,9 +9,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define LOG_ON 1
+#define LOG_ON 0
 
 #ifdef DEBUG
+#undef LOG_ON
 #define LOG_ON 1
 #endif
 

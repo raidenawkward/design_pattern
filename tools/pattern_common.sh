@@ -264,8 +264,8 @@ function class_source_code_generate()
 class $class {\n\
 \n\
 public:\n\
-	\t$class();\n\
-	\tvirtual ~$class();\n\
+\t$class();\n\
+\tvirtual ~$class();\n\
 };\n\
 \n\
 #endif // _`echo $header_file_name | tr [:lower:] [:upper:] | tr . _`\n\
