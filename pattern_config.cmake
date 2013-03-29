@@ -1,2 +1,3 @@
 SET(PATTERN_DIR_LIST
+factory
 )
