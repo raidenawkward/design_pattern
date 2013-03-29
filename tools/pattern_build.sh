@@ -49,9 +49,19 @@ fi
 
 if [ ! -z $2 ];
 then
-	BUILD_DIR=$2/$PATTERN
+	if [ "$PATTERN" == "all" ];
+	then
+		BUILD_DIR=$2
+	else
+		BUILD_DIR=$2/$PATTERN
+	fi
 else
-	BUILD_DIR=$PROJECT_ROOT/build/$PATTERN
+	if [ "$PATTERN" == "all" ];
+	then
+		BUILD_DIR=$PROJECT_ROOT/build
+	else
+		BUILD_DIR=$PROJECT_ROOT/build/$PATTERN
+	fi
 fi
 
 if [ "`check_project_exists`" != "0" ];
