@@ -235,6 +235,59 @@ ADD_EXECUTABLE(\${TAR} \${SRC})\n\
 	return $?
 }
 
+# $1 class
+# [$2] dir - source code dir
+# returns
+# 0 - succeed
+function class_source_code_generate()
+{
+	class=$1
+	dir=.
+
+	if [ -z $class ];
+	then
+		return 1
+	fi
+
+	if [ ! -z $2 ];
+	then
+		dir=$2
+	fi
+
+	header_file_name=`echo $class | tr [:upper:] [:lower:]`.h
+	cpp_file_name=`echo $class | tr [:upper:] [:lower:]`.cpp
+
+	PATTERN_HEADER_TEMPLETE="\
+#ifndef _`echo $header_file_name | tr [:lower:] [:upper:] | tr . _`\n\
+#define _`echo $header_file_name | tr [:lower:] [:upper:] | tr . _`\n\
+\n\
+class $class {\n\
+\n\
+public:\n\
+	\t$class();\n\
+	\tvirtual ~$class();\n\
+};\n\
+\n\
+#endif // _`echo $header_file_name | tr [:lower:] [:upper:] | tr . _`\n\
+	"
+	echo -e $PATTERN_HEADER_TEMPLETE > $dir/$header_file_name
+
+	PATTERN_CPP_TEMPLETE="\
+#include \"$header_file_name\"\n\
+\n\
+$class::$class()\n\
+{\n\
+}\n\
+\n\
+$class::~$class()\n\
+{\n\
+}\
+	"
+	echo -e $PATTERN_CPP_TEMPLETE > $dir/$cpp_file_name
+
+	return 0
+}
+
 # $1 pattern
 # $2 dir - source code dir
 # $3 class name
@@ -268,33 +321,7 @@ int main(int argc, char** argv)\n\
 	"
 	echo -e $PATTERN_MAIN_TEMPLETE > $dir/main.cpp
 
-	PATTERN_HEADER_TEMPLETE="\
-#ifndef _`echo $header_file_name | tr [:lower:] [:upper:] | tr . _`\n\
-#define _`echo $header_file_name | tr [:lower:] [:upper:] | tr . _`\n\
-\n\
-class $class {\n\
-\n\
-public:\n\
-	\t$class();\n\
-	\t~$class();\n\
-};\n\
-\n\
-#endif // _`echo $header_file_name | tr [:lower:] [:upper:] | tr . _`\n\
-	"
-	echo -e $PATTERN_HEADER_TEMPLETE > $dir/$header_file_name
-
-	PATTERN_CPP_TEMPLETE="\
-#include \"$header_file_name\"\n\
-\n\
-$class::$class()\n\
-{\n\
-}\n\
-\n\
-$class::~$class()\n\
-{\n\
-}\
-	"
-	echo -e $PATTERN_CPP_TEMPLETE > $dir/$cpp_file_name
+	class_source_code_generate $class $dir
 }
 
 # $1 pattern
