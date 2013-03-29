@@ -1,17 +1,15 @@
 #include "concretefactory.h"
 #include "concreteproduct.h"
-
-#include <stdio.h>
-#include <stdlib.h>
+#include "log.h"
 
 ConcreteFactory::ConcreteFactory()
 {
-	printf("[FUNCTION CALLED] %s\n", __FUNCTION__);
+	D_F_ENTRY;
 }
 
 ConcreteFactory::~ConcreteFactory()
 {
-	printf("[FUNCTION CALLED] %s\n", __FUNCTION__);
+	D_F_ENTRY;
 }
 
 Product* ConcreteFactory::createProduct()

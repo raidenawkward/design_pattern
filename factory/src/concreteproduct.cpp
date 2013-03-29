@@ -1,10 +1,11 @@
 #include "concreteproduct.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "log.h"
 
 ConcreteProduct::ConcreteProduct()
 {
-	printf("[FUNCTION CALLED] %s\n", __FUNCTION__);
+	D_F_ENTRY;
 }
 
 ConcreteProduct::~ConcreteProduct()

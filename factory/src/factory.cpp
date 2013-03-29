@@ -1,14 +1,15 @@
 #include "factory.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "log.h"
 
 
 Factory::Factory()
 {
-	printf("[FUNCTION CALLED] %s\n", __FUNCTION__);
+	D_F_ENTRY;
 }
 
 Factory::~Factory()
 {
-	printf("[FUNCTION CALLED] %s\n", __FUNCTION__);
+	D_F_ENTRY;
 }
