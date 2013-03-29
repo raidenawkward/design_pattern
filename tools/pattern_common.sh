@@ -134,6 +134,46 @@ function pattern_remove_from_file()
 	return $?
 }
 
+# $1 pattern from
+# $2 pattern to
+# $3 file
+# returns
+# 0 - succeed
+function pattern_rename_in_file()
+{
+	pattern_from=$1
+	pattern_to=$2
+	file=$3
+
+	if [ -z $pattern_from ] || [ -z $pattern_to ] || [ -z $file ];
+	then
+		return 1
+	fi
+
+	if [ "`check_source_exists $file`" != "0" ];
+	then
+		return 1
+	fi
+
+	temp_file=$file.tmp____
+	sed "s/^[[:space:]]*$pattern_from[[:space:]]*$/$pattern_to/g" $file  > $temp_file
+
+	if [ $? != 0 ];
+	then
+		rm -f $temp_file
+		return 1
+	fi
+
+	if [ ! -f $temp_file ];
+	then
+		return 1
+	fi
+
+	mv $temp_file $file
+
+	return $?
+}
+
 # get user's y/n choice
 # $1 tip context
 # returns[echo]
