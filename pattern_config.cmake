@@ -3,4 +3,5 @@ factory
 absfactory
 singleton
 builder
+prototype
 )
