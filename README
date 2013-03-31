@@ -38,13 +38,13 @@ for testing, type
 make test
 then check result in build/Testing/
 
-[INSTALL]
+[INSTALL] - not supported yet
 run cmake -DCMAKE_INSTALL_PREFIX={prefix}
 then run
 make install
 by default, install binaries into build/bin
 
 [BUILD CONFIGURATION]
-set the configuration by pass
+set the configuration by passing
 -DBUILD_CONFIGURATION={DEBUG|RELEASE}
 to cmake
