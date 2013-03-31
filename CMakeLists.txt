@@ -25,6 +25,6 @@ FOREACH(module ${PATTERN_DIR_LIST})
 
 	ADD_SUBDIRECTORY(${dir})
 
-	ADD_TEST(test-${module} ${sub_binary_dir}/${module})
+	ADD_TEST(test-${module} ${PROJECT_BINARY_DIR}/${module}/${module})
 ENDFOREACH()
 
