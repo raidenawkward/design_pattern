@@ -4,4 +4,5 @@ absfactory
 singleton
 builder
 prototype
+bridge
 )
