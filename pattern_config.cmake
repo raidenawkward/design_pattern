@@ -5,4 +5,5 @@ singleton
 builder
 prototype
 bridge
+adapter
 )
