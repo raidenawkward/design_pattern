@@ -4,7 +4,7 @@
 #include "colorprinter.h"
 #include "textgenerator.h"
 
-class GreetingAdapterClassStyle : public ColorPrinter, TextGenerator {
+class GreetingAdapterClassStyle : public ColorPrinter, private TextGenerator {
 
 public:
 	GreetingAdapterClassStyle();
