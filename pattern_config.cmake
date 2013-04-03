@@ -7,4 +7,5 @@ prototype
 bridge
 adapter
 decorator
+composite
 )
