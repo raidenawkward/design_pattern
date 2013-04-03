@@ -6,4 +6,5 @@ builder
 prototype
 bridge
 adapter
+decorator
 )
