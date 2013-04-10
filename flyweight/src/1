@@ -1,0 +1,15 @@
+#ifndef _PUREARRAYFACTORY_H
+#define _PUREARRAYFACTORY_H
+
+#include "array.h"
+#include "purearray.h"
+
+class PureArrayFactory {
+
+public:
+	PureArrayFactory();
+	virtual ~PureArrayFactory();
+};
+
+#endif // _PUREARRAYFACTORY_H
+

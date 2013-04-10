@@ -8,4 +8,5 @@ bridge
 adapter
 decorator
 composite
+flyweight
 )
