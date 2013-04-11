@@ -48,3 +48,27 @@ by default, install binaries into build/bin
 set the configuration by passing
 -DBUILD_CONFIGURATION={DEBUG|RELEASE}
 to cmake
+
+[TOOLS]
+Tools are provided in dir tools, which could be invoked for design_pattern
+on any PWD
+currently contents:
+
+
+class_add.sh			add .h, .cpp files for class with name specified, with 							includes basic construct func and other informations
+						in header files
+
+pattern_add.sh			add pattern sub-project, with cmake script, default cla							files and added pattern name to pattern_config.cmake
+
+pattern_build.sh		build pattern in dest build directory
+
+pattern_del.sh			remove pattern sub-project from current project:
+						1. clear the code dir
+						2. remove pattern info in pattern_config.cmake
+
+pattern_rename.sh		rename a pattern
+
+pattern_common.sh		public functions defines
+
+[LOG]
+basic log provided in tools/log.h
