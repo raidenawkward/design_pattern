@@ -9,4 +9,5 @@ adapter
 decorator
 composite
 flyweight
+facade
 )
