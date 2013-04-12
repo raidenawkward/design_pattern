@@ -10,4 +10,5 @@ decorator
 composite
 flyweight
 facade
+proxy
 )
