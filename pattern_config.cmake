@@ -12,4 +12,5 @@ flyweight
 facade
 proxy
 template
+strategy
 )
