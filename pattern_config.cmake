@@ -11,4 +11,5 @@ composite
 flyweight
 facade
 proxy
+template
 )
