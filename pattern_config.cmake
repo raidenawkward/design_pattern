@@ -13,4 +13,5 @@ facade
 proxy
 template
 strategy
+state
 )
