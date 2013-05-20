@@ -14,4 +14,5 @@ proxy
 template
 strategy
 state
+observer
 )
