@@ -17,4 +17,5 @@ state
 observer
 memento
 mediator
+command
 )
