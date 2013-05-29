@@ -16,4 +16,5 @@ strategy
 state
 observer
 memento
+mediator
 )
