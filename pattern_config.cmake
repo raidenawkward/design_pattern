@@ -15,4 +15,5 @@ template
 strategy
 state
 observer
+memento
 )
