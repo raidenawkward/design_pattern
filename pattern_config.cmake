@@ -19,4 +19,5 @@ memento
 mediator
 command
 visitor
+chain_of_responsibility
 )
