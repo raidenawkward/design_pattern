@@ -18,4 +18,5 @@ observer
 memento
 mediator
 command
+visitor
 )
