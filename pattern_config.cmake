@@ -21,4 +21,5 @@ command
 visitor
 chain_of_responsibility
 iterator
+interpreter
 )
