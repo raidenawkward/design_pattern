@@ -72,3 +72,4 @@ pattern_common.sh		public functions defines
 
 [LOG]
 basic log provided in tools/log.h
+
